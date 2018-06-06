@@ -12,8 +12,11 @@ module.exports = function evenLadderPattern(num) {
         // console.log(i);
         for (var j=0; j<i; j++){
           console.log(i);
+          evenLadder.push(i);
         }
+        evenLadder.push("space");
       }
     }
+    console.log(evenLadder);
   }
 }
