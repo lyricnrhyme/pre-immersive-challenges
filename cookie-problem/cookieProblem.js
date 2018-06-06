@@ -12,6 +12,9 @@ module.exports = function cookieProblem(array) {
   var beFair = 0;
   for (var i=0; i < array.length; i++) {
     var difference = bigNum - array[i];
-    console.log(difference);
+    // console.log(difference);
+    beFair += difference;
   }
+  console.log(beFair);
+  return beFair;
 }
