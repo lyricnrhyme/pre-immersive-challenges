@@ -5,8 +5,11 @@ module.exports = function evenLadderPattern(num) {
     return "";
   } else {
     // console.log(typeof num);
-    for (var i=0; i<num; i++){
-      console.log("num");
+    for (var i=2; i<=num; i++){
+      // console.log("num");
+      if ((i%2)==0) {
+        console.log(i);
+      }
     }
   }
 }
