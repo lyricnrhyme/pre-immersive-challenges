@@ -3,6 +3,7 @@ module.exports = function moveTheZeros(arrNum, isRight) {
   console.log(arrNum, isRight);
   var notZeros = [];
   var zeros = [];
+  var newArr = [];
   for (var i=0; i<arrNum.length; i++) {
     if (arrNum[i] != 0) {
       notZeros.push(arrNum[i]);
@@ -10,19 +11,21 @@ module.exports = function moveTheZeros(arrNum, isRight) {
       zeros.push(0);
     }
   }
-    
+  
   if (isRight == true) {
-    // console.log("move right");
     for (var i=0; i<zeros.length; i++) {
-      notZeros.push(zeros[i]);
+      notZeros.push(zeros[i])
     }
+    return notZeros;
+    // console.log("move right");
   } else {
-    for (var i=0; i<notZeros.length; i++) {
-      zeros.push(notZeros[i]);
+    for (var i=0; i<zeros.length; i++) {
+      notZeros.unshift(zeros[i]);
     }
+    return notZeros;
     // console.log("move left");
   }
-
+  
   // console.log(notZeros);
   // console.log(zeros);
 }
