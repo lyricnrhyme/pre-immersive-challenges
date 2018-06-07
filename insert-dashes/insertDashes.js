@@ -13,4 +13,6 @@ module.exports = function insertDashes(num) {
     }
   }
   console.log(splitNum);
+  var combinedNum = splitNum.join("");
+  return combinedNum;
 }
